@@ -3,7 +3,7 @@ geoip_new_ver=$(wget --no-check-certificate -qO- -t2 -T3 https://api.github.com/
 geosite_old_ver=1
 geosite_new_ver=$(wget --no-check-certificate -qO- -t2 -T3 https://api.github.com/repos/Loyalsoldier/domain-list-custom/releases/latest | grep "tag_name" | head -n 1 | awk -F ":" '{print $2}' | sed 's/\"//g;s/,//g;s/ //g;s/v//g')
 
-geo_directories=/etc/next-server
+geo_directories= //EXP. geo_directories=/root
 
 echo GeoIp Current Version Is $geoip_old_ver
 
